@@ -2,13 +2,7 @@
 using System.Reactive.Subjects;
 
 namespace ReactiveProgramming
-{
-    public class Machine
-    {
-        private BehaviorSubject<double> sensorValue;
-
-        public IObservable<double> SensorValue => sensorValue;
-    }
+{   
     public static class BehaviorSubjectExample
     {
        public  static void BehaviorSubject()
