@@ -8,4 +8,4 @@ using ReactiveProgramming;
 //ReplaySubjectExample.TimeReplaySubject();
 //ReplaySubjectExample.BufferReplaySubject();
 //BehaviorSubjectExample.BehaviorSubject();
-AsyncSubject.AsyncSubjectExample();
+//AsyncSubject.AsyncSubjectExample();

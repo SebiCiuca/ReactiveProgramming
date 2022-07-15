@@ -14,6 +14,9 @@ namespace ReactiveProgramming
             var europeMarketConsumer = new Subject<double>(); //observer of 'market' and obserable for inspect
 
             market
+                //observable decide what values should be subscribed for this observer
+                //only values over 50 should be "sent" to usMarket 
+                //basically usMarket has no clue if values under 50 were ever on the market
                 .Where(marketValue => marketValue > 50)
                 .Subscribe(usMarketConsumer);
 

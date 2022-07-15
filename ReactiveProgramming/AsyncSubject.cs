@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reactive.Subjects;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reactive.Subjects;
 
 namespace ReactiveProgramming
 {
@@ -11,17 +6,21 @@ namespace ReactiveProgramming
     {
         public static void AsyncSubjectExample()
         {
-            var sensonr = new AsyncSubject<double>();
+            //will return only one value ( last value )
+            var sensor = new AsyncSubject<double>();
 
-            sensonr.Inspect("async");
+            //we subscribe to sensor here
+            sensor.Inspect("async");
 
-            sensonr.OnNext(1.0);
-            sensonr.OnNext(2.0);
-            sensonr.OnNext(3.0);
+            sensor.OnNext(1.0);
+            sensor.OnNext(2.0);
+            sensor.OnNext(3.0);
 
-            sensonr.OnCompleted();
+            sensor.OnCompleted();
 
-            sensonr.OnNext(4.0);
+            sensor.OnNext(4.0);
+
+            //sensor.OnCompleted();
         }
     }
 }

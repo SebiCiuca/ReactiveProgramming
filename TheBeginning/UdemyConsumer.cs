@@ -24,14 +24,12 @@ namespace TheBeginning
 
             m_Finished = true;
 
-            Console.WriteLine("<- END");
+            Console.WriteLine($"<- Consummer {m_Name} completed.");
         }
 
         public void OnError(Exception error)
         {
-            Console.WriteLine("<- ERROR");
-
-            Console.WriteLine("<- {0}", error.Message);
+            Console.WriteLine($"<- Error on consummer {m_Name} {error.Message}");
         }
 
         public void OnNext(string value)
@@ -47,11 +45,6 @@ namespace TheBeginning
             {
                 //shows the received message
                 Console.WriteLine("{0} enrolled for course {1}", m_Name, value);
-
-                //do something
-
-                //ack the caller
-                Console.WriteLine("<- OK");
             }
         }
     }

@@ -24,7 +24,8 @@ namespace ReactiveProgramming
 
         public static void BufferReplaySubject()
         {
-            var market = new ReplaySubject<double>(3); //obserable
+            //this will return only the last 3 values no matter the timing.
+            var market = new ReplaySubject<double>(5);
 
             market.OnNext(1d);
             Thread.Sleep(200);

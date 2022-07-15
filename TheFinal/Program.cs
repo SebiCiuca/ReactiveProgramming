@@ -16,6 +16,7 @@ namespace TheFinal
             List<CompanyModel> euCompanies = new List<CompanyModel>();
             List<CompanyModel> usCompanies = new List<CompanyModel>();
 
+            //generate companies
             for (int i = 0; i < 10; i++)
             {
                 var newCompany = GenerateCompany(i);
@@ -34,7 +35,7 @@ namespace TheFinal
             usMarket = new MarketModel("Us market", usCompanies);
             euMarket = new MarketModel("Eu market", euCompanies);
 
-            //we create our all orders
+            //we create our all orders observable 
             var order = new Subject<OrderModel>();
 
             //we create orders subject (observers) for each market

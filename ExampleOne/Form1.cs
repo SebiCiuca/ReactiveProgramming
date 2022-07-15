@@ -50,6 +50,8 @@ namespace ExampleOne
 
         private IObservable<string[]> AsyncLookupInList(string text)
         {
+            System.Diagnostics.Debug.WriteLine($"Searched text was {text}");
+
             var matchingWords = words.Where(w => w.StartsWith(text)).ToArray();
 
             return Observable.Return(matchingWords);
@@ -62,7 +64,8 @@ namespace ExampleOne
             "Barman",
             "Aplication",
             "Caramel",
-            "Car"
+            "Car",
+            "Cell"
         };
 
     }
